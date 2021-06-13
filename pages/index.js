@@ -1,8 +1,8 @@
-import ChannelPage from "../components/channel-page/channel-page";
+import ChannelCards from "../components/channel-cards/channel-cards";
 export default function Home() {
   return (
     <div>
-      <ChannelPage />
+      <ChannelCards />
     </div>
   );
 }
