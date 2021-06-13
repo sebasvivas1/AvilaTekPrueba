@@ -1,6 +1,6 @@
 function Comment(props) {
   return (
-    <container className="w-1/2  h-auto flex  bg-gray-100 rounded-lg mx-auto items-center">
+    <container className="w-1/2  h-auto flex  bg-gray-100 rounded-lg mx-auto items-center p-5">
       <div className="p-2">
         <img
           className="w-20"

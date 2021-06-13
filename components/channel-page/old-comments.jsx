@@ -10,7 +10,7 @@ function OldComments(props) {
         <h5 className="text-xs text-center font-semibold">{props.userName}</h5>
         <h5 className="text-xs text-center italic">{props.commentDate}</h5>
       </div>
-      <div className="p-2 mx-1">
+      <div className="p-2 mx-1 w-full">
         <div className="bg-gray-200 rounded-lg p-1 text-md">
           {props.oldComment}
         </div>
