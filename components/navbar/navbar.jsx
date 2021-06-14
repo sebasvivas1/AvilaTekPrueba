@@ -1,4 +1,4 @@
-import Link from "next/Link";
+import Link from "next/link";
 function Navbar(props) {
   return (
     <div className="relative w-full bg-custom h-14 ">
@@ -19,26 +19,24 @@ function Navbar(props) {
           <Link href="/new-channel">New Channel</Link>
         </li>
 
-        <li className="flex items-center justify-between flex-wrap mt-4 cursor-pointer">
-          <div className="flex">
+        <div className="flex items-center justify-between flex-wrap mt-4 cursor-pointer">
+          <img
+            className="h-7 flex items-center justify-between flex-wrap"
+            src="https://i.pinimg.com/originals/0c/3b/3a/0c3b3adb1a7530892e55ef36d3be6cb8.png"
+            alt=""
+          />
+          <p className="px-1 flex items-center justify-between flex-wrap">
+            {props.userName}
+          </p>
+
+          <li className="flex items-center justify-between flex-wrap cursor-pointer">
             <img
-              className="h-7 flex items-center justify-between flex-wrap"
-              src="https://i.pinimg.com/originals/0c/3b/3a/0c3b3adb1a7530892e55ef36d3be6cb8.png"
+              className="h-6 flex items-center justify-between flex-wrap"
+              src="https://icons-for-free.com/iconfiles/png/512/logout-1324760598547500271.png"
               alt=""
             />
-            <p className="px-1 flex items-center justify-between flex-wrap">
-              {props.userName}
-            </p>
-
-            <li className="flex items-center justify-between flex-wrap cursor-pointer">
-              <img
-                className="h-6 flex items-center justify-between flex-wrap"
-                src="https://icons-for-free.com/iconfiles/png/512/logout-1324760598547500271.png"
-                alt=""
-              />
-            </li>
-          </div>
-        </li>
+          </li>
+        </div>
       </ul>
     </div>
   );

@@ -1,4 +1,4 @@
-import { mongoose } from "mongoose";
+import mongoose from "mongoose";
 
 const connectDB = (handler) => async (req, res) => {
   if (mongoose.connections[0].readyState) {
@@ -7,7 +7,7 @@ const connectDB = (handler) => async (req, res) => {
   }
   // Use new db connection
   await mongoose.connect(
-    "mongodb+srv://sebasvivas:HhVCG1BxjMA61OHU@cluster0.ykleq.mongodb.net/myFirstDatabase?retryWrites=true&w=majority",
+    "mongodb+srv://sebasvivas:tApTBTtgua826iEm@cluster0.ykleq.mongodb.net/myFirstDatabase?retryWrites=true&w=majority",
     {
       useUnifiedTopology: true,
       useFindAndModify: false,
