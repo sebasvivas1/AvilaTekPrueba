@@ -13,6 +13,9 @@ function ChannelPage(props) {
         title={props.title}
         description={props.description}
       />
+      <Comment />
+
+      <OldComment oldComment={props.comments} />
     </div>
   );
 }

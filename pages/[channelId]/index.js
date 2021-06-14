@@ -1,4 +1,6 @@
 import ChannelPage from "../../components/channel-page/channel-page";
+import Comment from "../../components/channel-page/comment";
+import OldComments from "../../components/channel-page/old-comments";
 import { MongoClient, ObjectId } from "mongodb";
 
 export function ChannelDesc(props) {
@@ -10,6 +12,9 @@ export function ChannelDesc(props) {
         banner={props.channelsData.banner}
         description={props.channelsData.description}
       />
+      {/* <Comment /> */}
+
+      <OldComments oldComment={props.channelsData.comments} />
     </div>
   );
 }
@@ -60,6 +65,7 @@ export async function getStaticProps(context) {
         description: selectedChannel.description,
         image: selectedChannel.image,
         banner: selectedChannel.banner,
+        // comments: selectedChannel.comments,
       },
     },
   };

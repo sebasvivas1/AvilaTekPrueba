@@ -13,9 +13,9 @@ function Navbar(props) {
           </Link>
         </li>
 
-        {/* <li className="flex items-center justify-between flex-wrap mt-4 cursor-pointer">
+        <li className="flex items-center justify-between flex-wrap mt-4 cursor-pointer">
           <Link href="/new-channel">New Channel</Link>
-        </li> */}
+        </li>
 
         <div className="flex items-center justify-between flex-wrap mt-4 cursor-pointer">
           {/* Esto es la imagen del perfil del usuario y su username */}
@@ -39,11 +39,11 @@ function Navbar(props) {
 
           <li className="flex items-center justify-between flex-wrap cursor-pointer">
             <Link href="/auth/register">REGISTER</Link>
-            <img
+            {/* <img
               className="h-6 flex items-center justify-between flex-wrap"
               src="https://svg-clipart.com/clipart/black/28kMjTe-login-icon-clipart.png"
               alt=""
-            />
+            /> */}
           </li>
         </div>
       </ul>

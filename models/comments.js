@@ -2,14 +2,14 @@ import mongoose from "mongoose";
 var Schema = mongoose.Schema;
 
 var comment = new Schema({
-  author: {
-    type: String,
-    required: true,
-  },
-  profileImg: {
-    type: String,
-    required: true,
-  },
+  // author: {
+  //   type: String,
+  //   required: true,
+  // },
+  // profileImg: {
+  //   type: String,
+  //   required: true,
+  // },
   content: {
     type: String,
     required: true,
