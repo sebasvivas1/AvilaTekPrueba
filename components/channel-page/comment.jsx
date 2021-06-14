@@ -1,13 +1,13 @@
 function Comment(props) {
   return (
-    <container className="w-1/2  h-auto flex  bg-gray-100 rounded-lg mx-auto items-center p-5">
+    <div className="w-1/2  h-auto flex  bg-gray-100 rounded-lg mx-auto items-center p-5">
       <div className="p-2">
         <img
           className="w-20"
-          src={props.profileImg}
-          alt={props.altProfileImg}
+          src={props.myProfileImg}
+          alt={props.myAltProfileImg}
         />
-        <h5 className="text-xs text-center">{props.userName}</h5>
+        <h5 className="text-xs text-center">{props.myUserName}</h5>
       </div>
       <div className="p-1 mx-1">
         <h4 className="italic">New Comment</h4>
@@ -26,7 +26,7 @@ function Comment(props) {
           </button>
         </div>
       </div>
-    </container>
+    </div>
   );
 }
 

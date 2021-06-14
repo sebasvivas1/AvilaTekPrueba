@@ -1,6 +1,6 @@
 function OldComments(props) {
   return (
-    <container className="w-1/2  h-auto flex  bg-gray-100 rounded-lg mx-auto items-center">
+    <div className="w-1/2  h-auto flex  bg-gray-100 rounded-lg mx-auto items-center">
       <div className="p-2">
         <img
           className="w-20"
@@ -15,7 +15,7 @@ function OldComments(props) {
           {props.oldComment}
         </div>
       </div>
-    </container>
+    </div>
   );
 }
 

@@ -14,11 +14,8 @@ function ChannelHeader(props) {
             alt="Profile Img"
           />
           <div className="p-3">
-            <h1 className="text-4xl italic semibold">All About Cats</h1>
-            <h3>
-              Channel Description askdjdhf;askdfjka aksljddfh ashdkfljhaskjdf
-              kjhflkwjehf kjahsl
-            </h3>
+            <h1 className="text-4xl italic semibold">{props.title}</h1>
+            <h3>{props.channelDesc}</h3>
           </div>
         </div>
       </div>
