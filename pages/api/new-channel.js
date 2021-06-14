@@ -1,29 +1,5 @@
-import { MongoClient } from "mongodb";
-
 import connectDB from "../../middleware/mongodb";
 import Channel from "../../models/channels";
-
-// async function handler(req, res) {
-//   if (req.method === "POST") {
-//     try {
-//       const data = req.body;
-//       console.log(data);
-
-//       const client = await MongoClient.connect(
-//         "mongodb+srv://sebasvivas:YHjPnYW3beZ0Fh4l@cluster0.ykleq.mongodb.net/channels?retryWrites=true&w=majority"
-//       );
-//       const db = client.db();
-//       const channelsCollection = db.collection("channels");
-//       const result = await channelsCollection.insertOne(data);
-//       console.log(result);
-//       client.close();
-
-//       return res.status(201).json({ message: "Channel Created!" });
-//     } catch (error) {
-//       console.log(error);
-//     }
-//   }
-// }
 
 const handler = async (req, res) => {
   if (req.method === "POST") {

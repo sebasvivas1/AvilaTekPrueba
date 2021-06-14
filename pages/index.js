@@ -1,4 +1,5 @@
 import ChannelList from "../components/channel-page/channelList";
+import connectDB from "../middleware/mongodb";
 
 const dummy = [
   {
@@ -52,9 +53,13 @@ function Home(props) {
 export async function getStaticProps() {
   // Fetch data from an API or server
 
+  const { db } = await connectDB();
+
+  const channels = await db.collection("channels").find({});
+
   return {
     props: {
-      channels: dummy,
+      channels: JSON.parse(JSON.stringify(channels)),
     },
     revalidate: 1,
   };
