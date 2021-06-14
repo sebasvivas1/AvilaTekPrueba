@@ -6,15 +6,13 @@ function ChannelList(props) {
       {props.channels.map((channel) => {
         return (
           <ChannelCards
-            id={channel.id}
-            channelBanner={channel.channelBanner}
-            altChannelBanner={channel.altChannelt}
-            channelProfileImg={channel.channelProfileImg}
-            altChannelProfileImg={channel.altChannelProfileImg}
-            imageUrl={channel.channelBanner}
+            id={channel._id.toString()}
+            channelBanner={channel.banner}
+            channelProfileImg={channel.image}
+            imageUrl={channel.banner}
             channelTitle={channel.title}
-            channelDesc={channel.channelDesc}
-            channelComments={channel.channelComments}
+            channelDesc={channel.description}
+            channelComments={channel.comments}
           />
         );
       })}

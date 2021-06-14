@@ -68,7 +68,9 @@ function NewChannelForm(props) {
           ></textarea>
         </div>
         <div className="p-2">
-          <button className="bg-gray-300 w-full ">Create Channel</button>
+          <button className="bg-gray-300 w-full " type="submit">
+            Create Channel
+          </button>
         </div>
       </form>
     </div>

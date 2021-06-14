@@ -12,27 +12,36 @@ function Navbar(props) {
             />
           </Link>
         </li>
-        <li className="flex items-center justify-between flex-wrap mt-4 cursor-pointer">
-          <Link href="/">Create Post</Link>
-        </li>
-        <li className="flex items-center justify-between flex-wrap mt-4 cursor-pointer">
+
+        {/* <li className="flex items-center justify-between flex-wrap mt-4 cursor-pointer">
           <Link href="/new-channel">New Channel</Link>
-        </li>
+        </li> */}
 
         <div className="flex items-center justify-between flex-wrap mt-4 cursor-pointer">
-          <img
+          {/* Esto es la imagen del perfil del usuario y su username */}
+
+          {/* <img
             className="h-7 flex items-center justify-between flex-wrap"
             src="https://i.pinimg.com/originals/0c/3b/3a/0c3b3adb1a7530892e55ef36d3be6cb8.png"
             alt=""
-          />
-          <p className="px-1 flex items-center justify-between flex-wrap">
+          /> */}
+          {/* <p className="px-1 flex items-center justify-between flex-wrap">
             {props.userName}
-          </p>
+          </p> */}
 
-          <li className="flex items-center justify-between flex-wrap cursor-pointer">
+          {/* <li className="flex items-center justify-between flex-wrap cursor-pointer">
             <img
               className="h-6 flex items-center justify-between flex-wrap"
               src="https://icons-for-free.com/iconfiles/png/512/logout-1324760598547500271.png"
+              alt=""
+            />
+          </li> */}
+
+          <li className="flex items-center justify-between flex-wrap cursor-pointer">
+            <Link href="/auth/register">REGISTER</Link>
+            <img
+              className="h-6 flex items-center justify-between flex-wrap"
+              src="https://svg-clipart.com/clipart/black/28kMjTe-login-icon-clipart.png"
               alt=""
             />
           </li>

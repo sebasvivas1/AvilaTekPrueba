@@ -1,28 +1,36 @@
 import ChannelPage from "../../components/channel-page/channel-page";
+import { MongoClient, ObjectId } from "mongodb";
 
-function ChannelDesc() {
+export function ChannelDesc(props) {
   return (
     <div>
-      <ChannelPage />
+      <ChannelPage
+        title={props.channelsData.title}
+        image={props.channelsData.image}
+        banner={props.channelsData.banner}
+        description={props.channelsData.description}
+      />
     </div>
   );
 }
 
 export async function getStaticPaths() {
+  const client = await MongoClient.connect(
+    "mongodb+srv://sebasvivas:tApTBTtgua826iEm@cluster0.ykleq.mongodb.net/myFirstDatabase?retryWrites=true&w=majority"
+  );
+
+  const db = client.db();
+
+  const channelsCollection = db.collection("channels");
+  const channels = await channelsCollection.find({}, { _id: 1 }).toArray();
+
+  client.close();
+
   return {
-    fallback: true,
-    paths: [
-      {
-        params: {
-          channelId: "ch1",
-        },
-      },
-      {
-        params: {
-          channelId: "ch2",
-        },
-      },
-    ],
+    fallback: false,
+    paths: channels.map((channel) => ({
+      params: { channelId: channel._id.toString() },
+    })),
   };
 }
 
@@ -30,24 +38,28 @@ export async function getStaticProps(context) {
   // Fetch data from a channel
 
   const channelId = context.params.channelId;
-  console.log(channelId);
+
+  const client = await MongoClient.connect(
+    "mongodb+srv://sebasvivas:tApTBTtgua826iEm@cluster0.ykleq.mongodb.net/myFirstDatabase?retryWrites=true&w=majority"
+  );
+
+  const db = client.db();
+
+  const channelsCollection = db.collection("channels");
+  const selectedChannel = await channelsCollection.findOne({
+    _id: ObjectId(channelId),
+  });
+
+  client.close();
 
   return {
     props: {
-      channels: {
-        channelBanner: "",
-        altChannelBanner: "Alt Channel banner",
-        channelProfileImg: "",
-        altProfileImg: "Alt profile Img",
-        channelTitle: "All About Cats",
-        channelDesc: "This is a channel to talk about cats",
-        myProfileImg: "",
-        myAltProfileImg: "My profile pic",
-        myUserName: "Mzterdox",
-        profileImg: "",
-        userAltProfileImg: "your profile pic",
-        userName: "your username",
-        oldComment: "this will be your comment",
+      channelsData: {
+        id: selectedChannel._id.toString(),
+        title: selectedChannel.title,
+        description: selectedChannel.description,
+        image: selectedChannel.image,
+        banner: selectedChannel.banner,
       },
     },
   };

@@ -12,7 +12,6 @@ function NewChannelPage() {
       },
     });
     const data = await response.json();
-    console.log(data);
     router.replace("/");
   }
 

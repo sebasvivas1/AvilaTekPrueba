@@ -12,7 +12,10 @@ function ChannelCards(props) {
         <img src={props.imageUrl} alt={props.channelTitle} />
         <div className="p-3">
           <h3>{props.channelTitle}</h3>
-          <div>Channel Description: {props.channelDesc}</div>
+          <div>
+            Channel Description: <br></br>
+            {props.channelDesc}
+          </div>
           <div>{props.channelComments} comments.</div>
           <button
             className="bg-gray-400 p-2 rounded-md font-semibold hover:bg-gray-300"
