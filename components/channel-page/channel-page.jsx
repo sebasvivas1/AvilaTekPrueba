@@ -7,9 +7,7 @@ function ChannelPage(props) {
     <div>
       <ChannelHeader
         banner={props.banner}
-        altChannelBanner="Alt banner"
         image={props.image}
-        altChannelProfileImg="Alt profile pic"
         title={props.title}
         description={props.description}
       />
