@@ -23,12 +23,3 @@ mongoose.models = {};
 var Channel = mongoose.model("Channel", channel);
 
 export default Channel;
-
-// comments: [
-//   {
-//     username: String,
-//     profileImg: String,
-//     content: String,
-//     date: Date(),
-//   },
-// ];

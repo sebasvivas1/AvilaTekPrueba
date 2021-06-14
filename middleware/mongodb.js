@@ -2,10 +2,8 @@ import mongoose from "mongoose";
 
 const connectDB = (handler) => async (req, res) => {
   if (mongoose.connections[0].readyState) {
-    //Use current db connection
     return handler(req, res);
   }
-  // Use new db connection
   await mongoose.connect(
     "mongodb+srv://sebasvivas:tApTBTtgua826iEm@cluster0.ykleq.mongodb.net/myFirstDatabase?retryWrites=true&w=majority",
     {
